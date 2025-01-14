@@ -13,6 +13,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["jest"], // Jestの型定義を追加
     "plugins": [
       {
         "name": "next"
