@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 
 type Props = {
-  outputConsole: (value: string) => void,
+  outputConsole: (value: string) => void;
 };
 
 const RenderInput: React.FC<Props> = ({ outputConsole }) => {
@@ -16,7 +16,7 @@ const RenderInput: React.FC<Props> = ({ outputConsole }) => {
 
   const updateValue = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
-    console.log(e.target.value); // debug
+    // console.log(e.target.value) // debug
   };
 
   return (
@@ -30,6 +30,6 @@ const RenderInput: React.FC<Props> = ({ outputConsole }) => {
       <button onClick={outputValue}>Console</button>
     </>
   );
-};
+}
 
 export default RenderInput;

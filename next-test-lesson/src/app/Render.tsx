@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Render = () => {
   return (
@@ -11,7 +11,7 @@ const Render = () => {
       <p>Test</p>
       <span data-testid="copyright">@React</span>
     </>
-  );
-};
+  )
+}
 
-export default Render;
+export default Render
