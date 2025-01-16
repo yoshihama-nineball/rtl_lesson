@@ -26,3 +26,16 @@ describe('inputフォームのonChangeイベント', () => {
     expect(inputValue.value).toBe('test');
   });
 });
+
+describe('Consoleボタンが状況に応してトリガーされる', () => {
+  it('output関数はトリガーされない', () => {
+    const mockOutputConsole = jest.fn();
+    render(<RenderInput outputConsole={mockOutputConsole} />);
+    const consoleButton = screen.getByRole('button');
+    //MEMO: userEvent.clickでconsoleボタンをクリック
+    userEvent.click(consoleButton);
+    //MEMO: 空のままボタンを押しているので、実装元のRenderInput.tsxのoutputValueを満たしていないため、mockOutputConsoleは呼ばれない
+    expect(mockOutputConsole).not.toHaveBeenCalled();
+  })
+
+})
