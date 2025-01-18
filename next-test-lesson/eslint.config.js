@@ -1,12 +1,12 @@
-import globals from 'globals'
-import pluginJs from '@eslint/js'
-import tseslint from '@typescript-eslint/eslint-plugin'
-import tsparser from '@typescript-eslint/parser'
-import prettierConfig from 'eslint-config-prettier'
-import prettierPlugin from 'eslint-plugin-prettier'
+const globals = require('globals');
+const pluginJs = require('@eslint/js');
+const tseslint = require('@typescript-eslint/eslint-plugin');
+const tsparser = require('@typescript-eslint/parser');
+const prettierConfig = require('eslint-config-prettier');
+const prettierPlugin = require('eslint-plugin-prettier');
 
 /** @type {import('eslint').Linter.Config[]} */
-export default [
+module.exports = [
   {
     files: ['**/*.{js,mjs,cjs,ts}'], // 対象ファイルのパターンを指定
   },
@@ -36,4 +36,4 @@ export default [
       ], // 未使用変数の警告
     },
   },
-]
+];

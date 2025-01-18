@@ -1,5 +1,6 @@
 {
   "name": "next-test-lesson",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +12,7 @@
     "test": "jest --env=jsdom --verbose"
   },
   "dependencies": {
-    "next": "15.1.4",
+    "next": "^15.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

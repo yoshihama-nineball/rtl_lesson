@@ -1,7 +1,10 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
-}
+  webpack: (config, { isServer }) => {
+    // 必要に応じてWebpackの設定を追加できます
+    return config;
+  }
+};
 
-export default nextConfig
+export default nextConfig;
