@@ -2,6 +2,7 @@
 import React from 'react'
 import RenderInput from './_components/RenderInput'
 import FrameworkList from './_components/FrameworkList'
+import MockServer from './MockServer'
 
 const Page = () => {
   const data = [
@@ -30,6 +31,7 @@ const Page = () => {
       <h2>React Test App</h2>
       <RenderInput outputConsole={handleOutputConsole} />
       <FrameworkList frameworks={data} />
+      <MockServer />
     </>
   )
 }
